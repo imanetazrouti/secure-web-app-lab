@@ -121,8 +121,8 @@ Ce projet illustre le cycle complet d’un site web sécurisé : du déploiement
 
 ## 👥 Collaborateurs
 
-- 👨‍💻 [TAZROUTI IMANE – Déploiement](https://www.linkedin.com/in/Imane Tazrouti)  
-- 🔐 [SANDOUBI HOUDA 2 – Sécurité & Hardening](https://www.linkedin.com/in/Houda Sandoubi)  
-- 🕵️ [SABSIBO NAAMA 3 -Pentester ](https://www.linkedin.com/in/Naama Sabsibo)
+- 👨‍💻 [TAZROUTI IMANE – Déploiement](www.linkedin.com/in/imane-tazrouti-656215400)  
+- 🔐 [SANDOUBI HOUDA 2 – Sécurité & Hardening](linkedin.com/in/houda-s-9284aa315)  
+- 🕵️ [SABSIBO NAAMA 3 -Pentester ](linkedin.com/in/naama-sabsibo-5b05a0286)
 
 

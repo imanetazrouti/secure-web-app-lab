@@ -11,19 +11,19 @@ L’objectif est de comprendre comment différents rôles (administrateur systè
 - Identifier et exploiter des vulnérabilités web courantes 
 - Évaluer l’efficacité des mesures de sécurité mises en place 
 ## 🛠️ Technologies utilisées
-.Linux (Ubuntu Server)
-. Apache 
-. MySQL
-. PHP  
-. SSH 
-. UFW / iptables 
-. Nmap 
+Linux (Apache Server)  
+Apache  
+MySQL 
+PHP   
+SSH  
+UFW / iptables  
+Nmap  
 ## 📁 Structure du projet
 - **deployment/** → Installation du serveur et déploiement de l’application  
 - **security/** → Configuration de la sécurité et durcissement du système  
-- **pentest/** → Tests de vulnérabilité et simulations d’attaques  
+- **test/** → Tests de vulnérabilité et simulations d’attaques  
 - **screenshots/** → Captures d’écran des résultats  
-- **report/** → Documentation finale du projet
+
  ## 🚀 Compétences acquises
 - Administration système Linux  
 - Configuration de serveurs web    

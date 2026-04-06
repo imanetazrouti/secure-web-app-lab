@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cwatch.comodo.com/blog/wp-content/uploads/2020/05/good-website-security-plan.jpg"  width="100%">
+  <img src="https://zeve.au/sitecentre/uploads/2022/06/website-security-guide.jpg"  width="100%">
 </p>
 
 # 🔐 Secure-web-app-lab

@@ -1,10 +1,8 @@
 <p align="center">
-  <img src="https://zeve.au/sitecentre/uploads/2022/06/website-security-guide.jpg" 
+  <img src="https://media.licdn.com/dms/image/v2/D4D12AQGbSto9IhhMhg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1689472520460?e=2147483647&v=beta&t=02RdiCtCXEnYz-s_50jyGnXeeJFPeKrIW3pq7kfglkI" 
        style="width:100%; max-height:300px; object-fit:cover;">
 </p>
-<p align="center">
-  <img src=""  width="100%" height="30%">
-</p>
+
 
 # 🔐 Secure-web-app-lab
 Ce projet est un laboratoire pratique centré sur le déploiement, le hardening et le test de sécurité d'un site web hébergée sur un serveur Linux. Il simule un environnement réel où un système est d’abord mis en place, ensuite sécurisé, puis testé face à des vulnérabilités courantes.

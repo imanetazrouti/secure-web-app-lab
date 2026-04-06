@@ -5,7 +5,7 @@
 
 # 🔐 Secure-web-app-lab
 
-Ce projet est un laboratoire pratique centré sur le déploiement, le hardening et le test de sécurité d'un site web hébergée sur un serveur Linux. Il simule un environnement réel où un système est d’abord mis en place, ensuite sécurisé, puis testé face à des vulnérabilités courantes.  
+Ce projet est un laboratoire pratique centré sur le déploiement, le hardening et le test de sécurité d'un site web hébergé sur un serveur Linux. Il simule un environnement réel où un système est d’abord mis en place, ensuite sécurisé, puis testé face à des vulnérabilités courantes.  
 L’objectif est de comprendre comment différents rôles (administrateur système, analyste sécurité et pentester) collaborent pour construire et protéger une infrastructure web.
 
 ---

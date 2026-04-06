@@ -42,7 +42,7 @@ L’objectif est de comprendre comment différents rôles (administrateur systè
 
 ## 👥 Répartition des rôles 
 
-*(ajouter vos rôles ici si nécessaire)*
+
 
 ---
 

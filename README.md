@@ -34,7 +34,7 @@ L’objectif est de comprendre comment différents rôles (administrateur systè
 ## 📁 Structure du projet
 
 - **deployment/** → Installation du serveur et déploiement de l’application  
-- **security/** → Configuration de la sécurité et durcissement du système  
+- **security/** → Configuration de la sécurité et durcissement(hardening) du système  
 - **test/** → Tests de vulnérabilité et simulations d’attaques  
 - **screenshots/** → Captures d’écran des résultats  
 

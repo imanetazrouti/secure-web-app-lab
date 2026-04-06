@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="https://zeve.au/sitecentre/uploads/2022/06/website-security-guide.jpg"  width="100%" height="30%">
+  <img src="https://zeve.au/sitecentre/uploads/2022/06/website-security-guide.jpg" 
+       style="width:100%; max-height:300px; object-fit:cover;">
+</p>
+<p align="center">
+  <img src=""  width="100%" height="30%">
 </p>
 
 # 🔐 Secure-web-app-lab

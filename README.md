@@ -42,15 +42,30 @@ L’objectif est de comprendre comment différents rôles (administrateur systè
 
 ## 👥 Répartition des rôles 
 
+# 🔐 HOUDA — Analyste Sécurité & Hardening
 
+## 🎯 Mon rôle
+Sécuriser le serveur  déployé par IMANE
+
+## Ce que j'ai fait
+### 🔥 Pare-feu (UFW)
+- Bloqué tous les ports par défaut
+- Autorisé uniquement SSH (22), HTTP (80), HTTPS (443)
+### 🔑 Sécurisation SSH
+- Désactivé la connexion root
+- Changé le port par défaut
+- Authentification par clé uniquement
+### 🛡️ Fail2ban
+- Installé et configuré
+- Bannissement après 3 tentatives échouées
+## 🛠️ Commandes principales utilisées
+- ufw enable / ufw allow / ufw deny
+- systemctl restart ssh
+- fail2ban-client status
 
 ---
 
-## 🚀 Compétences acquises
 
-- Administration système Linux  
-- Configuration de serveurs web    
-- Introduction au pentesting
 
 ---
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fcwatch.comodo.com%2Fblog%2Fwebsite-security%2Fwhat-is-website-security%2F&ved=0CBYQjRxqFwoTCJChhIWy2ZMDFQAAAAAdAAAAABA-&opi=89978449"  width="100%">
+  <img src="https://cwatch.comodo.com/blog/wp-content/uploads/2020/05/good-website-security-plan.jpg"  width="100%">
 </p>
 
 # 🔐 Secure-web-app-lab

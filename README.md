@@ -41,7 +41,7 @@ L’objectif est de comprendre comment différents rôles (administrateur systè
 ---
 
 ## 👥 Répartition des rôles 
-### ** 🖥️ IMANE - Deploiement **
+### **🖥️ IMANE - Deploiement**
 ###### Déploiement de l’infrastructure 
 - Installation et configuration d’une machine virtuelle Linux. 
 - Mise en place du serveur Apache. 
@@ -81,7 +81,7 @@ Sécuriser le serveur  déployé par IMANE
 - fail2ban-client status
 
 ---
-### ** Naama - Pentester **
+### **Naama - Pentester**
 
 
 ---

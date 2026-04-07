@@ -51,6 +51,23 @@ L’objectif est de comprendre comment différents rôles (administrateur systè
 
 - Création d’une page web simple intégrant PHP, HTML et CSS. 
 - Vérification du bon fonctionnement du serveur Apache et de PHP sur la machine virtuelle.
+  ###### explication du code utilisé
+   Partie PHP : traitement des données
+  
+  - **Connexion à la base de données** : le script utilise `mysqli` pour se connecter à MariaDB avec les informations définies (`host`, `db`, `user`, `pass`).  
+  - **Récupération des données du formulaire** : les champs `fullname`, `username`, `password`, `email` et `phone` sont récupérés via `$_POST`.  
+  - **Insertion sécurisée** : utilisation d'une **requête préparée** (`prepare`) et `bind_param` pour éviter les injections SQL.  
+  - **Retour utilisateur** : si l'insertion réussit, un message de succès est affiché ; sinon, l'erreur est renvoyée.  
+  - **Fermeture** : la requête et la connexion à la base de données sont fermées après exécution.
+  Partie HTML : structure du formulaire
+- Formulaire simple avec des champs pour le nom complet, le nom d’utilisateur, le mot de passe, l’email et le téléphone.  
+- Méthode `POST` utilisée pour envoyer les données au serveur.  
+- Chaque champ obligatoire est marqué avec `required`.
+  Partie CSS : style et interactivité
+- Formulaire attractif et interactif.  
+- Données correctement insérées dans MariaDB.  
+- Retour clair à l’utilisateur sur le succès ou l’échec de l’inscription.
+    
   ###### Objectif :
 - S’assurer que l’environnement de développement est opérationnel pour accueillir le projet.
 - Fournir une page web de démonstration comme preuve de concept. 

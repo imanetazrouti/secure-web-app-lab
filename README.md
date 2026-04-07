@@ -41,33 +41,47 @@ L’objectif est de comprendre comment différents rôles (administrateur systè
 ---
 
 ## 👥 Répartition des rôles 
-### ** IMANE - Deploiement 
+### ** 🖥️ IMANE - Deploiement **
+###### Déploiement de l’infrastructure 
+- Installation et configuration d’une machine virtuelle Linux. 
+- Mise en place du serveur Apache. 
+- Installation et configuration de MariaDB pour la base de données. 
+- Installation de PHP pour le traitement côté serveur.
+  ###### Développement d’une page web test 
+
+- Création d’une page web simple intégrant PHP, HTML et CSS. 
+- Vérification du bon fonctionnement du serveur Apache et de PHP sur la machine virtuelle.
+  ###### Objectif :
+- S’assurer que l’environnement de développement est opérationnel pour accueillir le projet.
+- Fournir une page web de démonstration comme preuve de concept. 
+
 
 ---
 
+
 ### **🔐 HOUDA — Analyste Sécurité & Hardening**
 
-## 🎯 Mon rôle
+##### 🎯 Mon rôle
 Sécuriser le serveur  déployé par IMANE
 
-## Ce que j'ai fait
-  ### 🔥 Pare-feu (UFW)
+##### Ce que j'ai fait
+ ###### 🔥 Pare-feu (UFW)
 - Bloqué tous les ports par défaut
 - Autorisé uniquement SSH (22), HTTP (80), HTTPS (443)
-  ### 🔑 Sécurisation SSH
+  ###### 🔑 Sécurisation SSH
 - Désactivé la connexion root
 - Changé le port par défaut
 - Authentification par clé uniquement
-  ### 🛡️ Fail2ban
+  ###### 🛡️ Fail2ban
 - Installé et configuré
 - Bannissement après 3 tentatives échouées
-  ## 🛠️ Commandes principales utilisées
+  ###### 🛠️ Commandes principales utilisées
 - ufw enable / ufw allow / ufw deny
 - systemctl restart ssh
 - fail2ban-client status
 
 ---
-### ** Naama - Pentester
+### ** Naama - Pentester **
 
 
 ---

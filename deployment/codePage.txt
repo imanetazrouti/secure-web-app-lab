@@ -1,0 +1,147 @@
+<?php
+$host = "localhost";
+$db   = "test_db";
+$user = "php_user";
+$pass = "php_password";
+
+$message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fullname = $_POST['fullname'] ?? '';
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $email    = $_POST['email'] ?? '';
+    $phone    = $_POST['phone'] ?? '';
+
+    // Connect to MariaDB
+    $conn = new mysqli($host, $user, $pass, $db);
+    if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
+
+    // Insert user
+    $stmt = $conn->prepare("INSERT INTO users (fullname, username, password, email, phone) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $fullname, $username, $password, $email, $phone);
+
+    if ($stmt->execute()) $message = "Registration successful! 🎉";
+    else $message = "Error: " . $stmt->error;
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Registration Form</title>
+<style>
+    /* General body */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+ }
+
+    /* Container */
+    .container {
+        background: #fff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        width: 400px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.5s ease;
+    }
+
+    .container:hover {
+        transform: scale(1.05) rotate(-1deg);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    /* Input fields */
+    input {
+        width: 100%;
+        padding: 14px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+        transition: all 0.3s ease;
+    }
+
+    input:focus {
+        border-color: #764ba2;
+        box-shadow: 0 0 8px rgba(118,75,162,0.5);
+        transform: translateX(5px);
+    }
+
+    /* Button */
+    button {
+        width: 100%;
+        padding: 15px;
+        margin-top: 15px;
+        border: none;
+ border-radius: 8px;
+        background: #764ba2;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+    button:hover {
+        background: #667eea;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .message {
+        margin-top: 15px;
+        text-align: center;
+        font-weight: bold;
+        color: #d8000c;
+        transition: all 0.5s ease;
+    }
+
+    .success {
+        color: green;
+        animation: slideDown 0.5s ease;
+    }
+
+    @keyframes slideDown {
+        0% { transform: translateY(-20px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Register Account</h2>
+    <form method="post" action="">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="phone" placeholder="Phone Number">
+        <button type="submit">Sign Up</button>
+    </form>
+ <?php 
+        if ($message) {
+            $class = strpos($message, "successful") !== false ? "success" : "";
+            echo "<div class='message $class'>$message</div>";
+        }
+    ?>
+</div>
+</body>
+</html>

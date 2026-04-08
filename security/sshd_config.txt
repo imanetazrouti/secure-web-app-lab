@@ -1,8 +1,8 @@
-[sshd]
-enabled = true 
-port = 2222
-filtrer = sshd
-logpath = /var/log/auth.log
-maxretry = 3
-bantime = 600
-findtime = 600
+port 2222  
+permitRootlogin no
+passwordAuthentication no
+protocol 2
+Allow_Users_Securite 
+LoginGraceTime 20
+MaxAuthries 3
+MaxSessions 2

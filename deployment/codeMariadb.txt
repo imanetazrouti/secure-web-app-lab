@@ -1,0 +1,24 @@
+--> Créer la base de données
+CREATE DATABASE test_db;
+
+-->️ Créer l’utilisateur et lui donner les droits
+CREATE USER 'php_user'@'localhost' IDENTIFIED BY 'php_password';
+GRANT ALL PRIVILEGES ON test_db.* TO 'php_user'@'localhost';
+FLUSH PRIVILEGES;
+
+--> Sélectionner la base
+USE test_db;
+
+--> Créer la table users
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20)
+);
+
+--> Vérification
+SHOW DATABASES;
+SHOW TABLES;

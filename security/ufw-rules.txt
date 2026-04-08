@@ -1,0 +1,8 @@
+firewall UFW : parfeu filtre le trafic
+> sudo ufw default deny incoming
+> sudo ufw default allow outgoing
+autoriser ssh sur port port securise 
+> sudo ufw allow 2222 /tcp
+autoriser serveur web 
+> sudo ufw allow 80
+> sudo ufw allow 443

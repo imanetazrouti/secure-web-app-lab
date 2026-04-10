@@ -98,7 +98,7 @@ Sécuriser le serveur  déployé par IMANE
 - fail2ban-client status
 
 
-### ** 🔍🔐 Naama - Pentester**
+### **🔍🔐 NAAMA - Pentesting & Analyse de Sécurité**
 Vérifier l’efficacité des mesures de sécurité mises en place après le hardening et identifier d’éventuelles failles résiduelles.
 #### Scan reseau:
 - commande utilisée :  nmap -sS -sV --script vuln <IP>

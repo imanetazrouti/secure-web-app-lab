@@ -159,11 +159,6 @@ Ce projet illustre le cycle complet d’un site web sécurisé : du déploiement
 
 ---
 
-## 📊 Résultat
-
-Ce projet illustre le cycle complet d’un site web sécurisé : du déploiement à la défense, jusqu’à la simulation d’attaques, en mettant en évidence les forces et les faiblesses du système.
-
----
 
 ## 👥 Collaborateurs
 

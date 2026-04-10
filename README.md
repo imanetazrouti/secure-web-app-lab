@@ -101,7 +101,7 @@ Sécuriser le serveur  déployé par IMANE
 ### **🔍🔐 NAAMA - Pentesting & Analyse de Sécurité**
 Vérifier l’efficacité des mesures de sécurité mises en place après le hardening et identifier d’éventuelles failles résiduelles. 
 #### Scan reseau:
-- commande utilisée :  nmap -sS -sV --script vuln <IP>
+- commande utilisée :  nmap -sS -sV --script vuln @IP
   
 Objectif : 
 *Identifier les services actifs 
@@ -117,7 +117,7 @@ Même après hardening :
 
 
 #### Test de résistance SSH (Brute Force): 
-- commande utilisée : hydra -t 2 -W 2 -l user -P /usr/share/wordlists/rockyou.txt ssh://<IP>
+- commande utilisée : hydra -t 2 -W 2 -l user -P /usr/share/wordlists/rockyou.txt ssh://@IP
 
 🔍 Analyse: 
  Aucun mot de passe compromis 
@@ -129,7 +129,7 @@ L'authentification par clé SSH empeche toute compromission
 
 
 #### Analyse des headers HTTP:
-- commande utilisée : curl -I http://<IP>
+- commande utilisée : curl -I http://@IP
   
 Objectif : 
 Examiner les en-têtes HTTP retournés par le serveur 

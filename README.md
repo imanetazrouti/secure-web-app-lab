@@ -78,11 +78,11 @@ L’objectif est de comprendre comment différents rôles (administrateur systè
 
 ### **🔐 HOUDA — Analyste Sécurité & Hardening**
 
-##### 🎯 Mon rôle
+#####  Mon rôle
 Sécuriser le serveur  déployé par IMANE
 
 ##### Ce que j'ai fait
- ###### 🔥 Pare-feu (UFW)
+  ###### 🔥 Pare-feu (UFW)
 - Bloqué tous les ports par défaut
 - Autorisé uniquement SSH (22), HTTP (80), HTTPS (443)
   ###### 🔑 Sécurisation SSH

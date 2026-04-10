@@ -98,8 +98,47 @@ Sécuriser le serveur  déployé par IMANE
 - fail2ban-client status
 
 
-### **Naama - Pentester**
+### ** 🔍🔐 Naama - Pentester**
+Vérifier l’efficacité des mesures de sécurité mises en place après le hardening et identifier d’éventuelles failles résiduelles.
+#### Scan reseau:
+- commande utilisée :  nmap -sS -sV --script vuln <IP>
+Objectif :
+*Identifier les services actifs
+*Détecter automatiquement les vulnérabilités connues (CVE)
+Cette vulnérabilité indique une faille connue dans la version du serveur Apache
+Elle peut potentiellement permettre :
+*exécution de code
+*fuite d’informations
+*compromission du serveur (selon exploitation)
+Même après hardening :
+✅ L’accès au serveur est bien contrôlé (firewall, SSH sécurisé)
+⚠️ Mais une faille applicative persiste au niveau du service web
 
+
+#### Test de résistance SSH (Brute Force):
+- commande utilisée : hydra -t 2 -W 2 -l user -P /usr/share/wordlists/rockyou.txt ssh://<IP>
+🔍 Analyse:
+ Aucun mot de passe compromis
+ L’attaque est fortement ralentie (preuve d’un mécanisme de défense actif)
+ Le service SSH résiste aux attaques par dictionnaire
+ Cela confirme que :
+Fail2ban fonctionne correctement (blocage après tentatives)
+L'authentification par clé SSH empeche toute compromission
+
+
+#### Analyse des headers HTTP:
+- commande utilisée : curl -I http://<IP>
+Objectif :
+Examiner les en-têtes HTTP retournés par le serveur
+Identifier les informations sensibles et les mécanismes de protection
+* Divulgation d’information
+→ La version exacte d’Apache est exposée (utile pour un attaquant)
+* Manque de headers de sécurité
+→ Le serveur est potentiellement vulnérable à :
+Clickjacking
+XSS
+MIME sniffing
+ Cela montre que le serveur est sécurisé au niveau réseau, mais le hardening web est incomplet.
 
 ---
 

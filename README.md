@@ -101,8 +101,8 @@ Sécuriser le serveur  déployé par IMANE
 ### **🔍🔐 NAAMA - Pentesting & Analyse de Sécurité**
 Vérifier l'efficacité des mesures de sécurité mises en place après le hardening et identifier d'éventuelles failles résiduelles.
 
-##### Scan reseau:
-- commande utilisée :  nmap -sS -sV --script vuln <IP>
+###### Scan reseau:
+- commande utilisée :  nmap -sS -sV --script vuln @IP
 
     Objectif :
 
@@ -126,8 +126,8 @@ Vérifier l'efficacité des mesures de sécurité mises en place après le harde
 
     ⚠️ Mais une faille applicative persiste au niveau du service web
 
-##### Test de résistance SSH (Brute Force):
-- commande utilisée : hydra -t 2 -W 2 -l user -P /usr/share/wordlists/rockyou.txt ssh://<IP>
+###### Test de résistance SSH (Brute Force):
+- commande utilisée : hydra -t 2 -W 2 -l user -P /usr/share/wordlists/rockyou.txt ssh://@IP
 
     🔍 Analyse:
 
@@ -143,8 +143,8 @@ Vérifier l'efficacité des mesures de sécurité mises en place après le harde
 
     L'authentification par clé SSH empeche toute compromission
 
-##### Analyse des headers HTTP:
-- commande utilisée : curl -I http://<IP>
+###### Analyse des headers HTTP:
+- commande utilisée : curl -I http://@IP
 
     Objectif :
 
@@ -189,6 +189,6 @@ Ce projet illustre le cycle complet d’un site web sécurisé : du déploiement
 
 - 👨‍💻 [TAZROUTI IMANE – Déploiement](www.linkedin.com/in/imane-tazrouti-656215400)  
 - 🔐 [SANDOUBI HOUDA 2 – Sécurité & Hardening](linkedin.com/in/houda-s-9284aa315)  
-- 🕵️ [SABSIBO NAAMA 3 -Pentester ](linkedin.com/in/naama-sabsibo-5b05a0286)
+- 🕵️ [SABSIBO NAAMA 3 -Pentesting & Analyse de sécurité ](linkedin.com/in/naama-sabsibo-5b05a0286)
 
 

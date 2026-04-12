@@ -1,0 +1,39 @@
+La premiere commande utilisee est: nmap -sV --script vuln @IP 
+**nmap** est un outil utilisé en pentesting pour scanner les réseaux et découvrir les ports ouverts, les services et les vulnérabilités. 
+
+-sV (Service Version Detection) : cette option permet de détecter les services actifs sur les ports ouverts (ex: SSH, HTTP, FTP…) et de récupérer leurs versions exactes. 
+
+--script vuln : cette option lance des scripts NSE (Nmap Scripting Engine) spécialisés dans la détection de vulnérabilités. Concrètement, Nmap va tester les services détectés, comparer avec des bases de vulnérabilités connues et signaler des failles potentielles. 
+
+---
+
+La seconde commande utilisee est : hydra -t 2 -W 2 -l user -P /usr/share/wordlists/rockyou.txt ssh://@IP
+**hydra** est un outil de brute force utilisé en pentesting pour tester des identifiants sur plusieurs services (SSH, FTP, HTTP, etc.).
+
+-l user : Spécifie le nom d’utilisateur 
+
+-P /usr/share/wordlists/rockyou.txt : Liste de mots de passe (wordlist), rockyou.txt est très utilisée (mots de passe réels fuités)
+
+ssh://@IP : indique le protocole (SSH) et la machine cible (@IP) 
+
+-t 2 (threads) : nombre de tentatives en parallèle, ici 2 connexions simultanées. 
+
+-W 2 (wait time) : temps d'attente entre les tentatives (en secondes), ici 2 secondes.
+
+---
+
+Et la derniere commande utilisee est :  curl -I http://@IP
+**curl** est un outil en ligne de commande pour envoyer des requêtes HTTP (comme un navigateur, mais en terminal). 
+
+-I (HEAD request) : envoie une requête HEAD, le serveur répond uniquement avec les headers, pas le contenu HTML. 
+
+- http://@IP : serveur web sur l'adresse IP qui utilise le protocole HTTP.
+
+HTTP/1.1 200 OK : succès
+Server: Apache/2.4.65 (Debian) : indique le serveur web utilisé. Dans ce cas le serveur est à jour et pas de vulnérabilité connue critique. 
+Date : date de la réponse du serveur. 
+Content-Type: text/html : type de contenu retourné. 
+ETag : le serveur web utilise un mécanisme de cache, chaque ressource a un identifiant unique. Avec la présence de ce header, possibilité d'information disclosure.
+
+
+Le serveur web utilise Apache version 2.4.65, une version récente ne présentant pas de vulnérabilités critiques connues. Cependant, la divulgation de la version via l’en-tête "Server" ainsi que la présence de l’en-tête "ETag" peuvent faciliter le fingerprinting du serveur et entraîner une fuite d’informations mineure.

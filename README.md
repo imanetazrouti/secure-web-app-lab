@@ -97,6 +97,8 @@ Sécuriser le serveur  déployé par IMANE
 - systemctl restart ssh
 - fail2ban-client status
 
+---
+
 
 ### **🔍🔐 NAAMA - Pentesting & Analyse de Sécurité**
 Vérifier l'efficacité des mesures de sécurité mises en place après le hardening et identifier d'éventuelles failles résiduelles.
@@ -158,13 +160,7 @@ Vérifier l'efficacité des mesures de sécurité mises en place après le harde
 
     * Manque de headers de sécurité
 
-    → Le serveur est potentiellement vulnérable à :
-
-    Clickjacking
-
-    XSS
-
-    MIME sniffing
+    → Le serveur est potentiellement vulnérable à : Clickjacking / XSS...
 
     Cela montre que le serveur est sécurisé au niveau réseau, mais le hardening web est incomplet.
 
